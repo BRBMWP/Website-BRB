@@ -4,6 +4,8 @@ import Image from "next/image";
 import photoMizumi from "@photo/MizuMi UV Acne Matte Serum (DP)/IMG_7516.JPG";
 import photoSpotify from "@photo/Spotify/Spotify Pic.jpg";
 import photoBangkokWorld from "@photo/Proposal Marketing Bangkok World/Bangkok World Final Project .jpg";
+import photoPizza from "@photo/Pizza/pizza.png";
+import AwardsCarousel from "./components/AwardsCarousel";
 
 export default function Home() {
   return (
@@ -34,42 +36,7 @@ export default function Home() {
         </section>
 
         {/* Production */}
-        <section id="production" className="container py-12">
-          <h2 className="section-title mb-6">Production</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <article className="card card-hover p-5">
-              <Image src={photoMizumi} alt="MizuMi UV Acne Matte Serum (DP)" className="rounded-md border" />
-              <h3 className="font-semibold">MizuMi UV Acne Matte Serum (DP)</h3>
-              <p className="mt-2 text-sm opacity-90">Cameraman/DP setting camera angles; defined target audience and crafted the key message.</p>
-              <div className="mt-3">
-                <ReadMoreDialog
-                  title="MizuMi UV Acne Matte Serum (DP)"
-                  externalHref="https://drive.google.com/file/d/1Bz-TfCDtcwQEFgkf8ygfgMLY-r2K_RVy/view?usp=sharing"
-                  externalLabel="View project"
-                >
-                  In this role, I served as the cameraman or Director of Photography (DP), responsible for setting camera
-                  angles in the breakdown. Additionally, I defined the target audience and crafted the key message for the
-                  project.
-                </ReadMoreDialog>
-              </div>
-            </article>
-            <article className="card card-hover p-5">
-              <h3 className="font-semibold">Propoliz Advertise</h3>
-              <p className="mt-2 text-sm opacity-90">Analyzed scenes to determine lighting; collaborated with the director and DP.</p>
-              <div className="mt-3">
-                <ReadMoreDialog
-                  title="Propoliz Advertise"
-                  externalHref="https://drive.google.com/file/d/1rj2qdZId-DXv_rwtdjLd93Pltkl-9VzB/view?usp=sharing"
-                  externalLabel="Watch here"
-                >
-                  I analyzed each scene from the breakdown to determine appropriate lighting placement. I collaborated closely
-                  with the director and the Director of Photography (DP) to ensure that the lighting supported the visual tone
-                  and narrative of the film.
-                </ReadMoreDialog>
-              </div>
-            </article>
-          </div>
-        </section>
+       
 
         {/* Projects */}
         <section id="projects" className="section-alt">
@@ -135,7 +102,7 @@ export default function Home() {
                 </div>
               </article>
               <article className="card card-hover p-5">
-                <Image src={photoBangkokWorld} alt="Proposal Marketing: Bangkok World" className="rounded-md border" />
+              <Image src={photoPizza} alt="Pizza" className="rounded-md border" />
                 <h3 className="font-semibold">Brand Mgmt: The Pizza Company</h3>
                 <p className="mt-2 text-sm opacity-90">Cloud Kitchen strategy analysis with market data and branding frameworks.</p>
                 <div className="mt-3">
@@ -151,6 +118,7 @@ export default function Home() {
                 </div>
               </article>
               <article className="card card-hover p-5">
+              <Image src={photoBangkokWorld} alt="Proposal Marketing: Bangkok World" className="rounded-md border" />
                 <h3 className="font-semibold">Proposal: Bangkok World</h3>
                 <p className="mt-2 text-sm opacity-90">Night market event concept with celebrity engagement to reach target groups.</p>
                 <div className="mt-3">
@@ -167,17 +135,59 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        <section id="production" className="container py-12">
+          <h2 className="section-title mb-6">Production</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <article className="card card-hover p-5">
+              <Image src={photoMizumi} alt="MizuMi UV Acne Matte Serum (DP)" className="rounded-md border" />
+              <h3 className="font-semibold">MizuMi UV Acne Matte Serum (DP)</h3>
+              <p className="mt-2 text-sm opacity-90">Cameraman/DP setting camera angles; defined target audience and crafted the key message.</p>
+              <div className="mt-3">
+                <ReadMoreDialog
+                  title="MizuMi UV Acne Matte Serum (DP)"
+                  externalHref="https://drive.google.com/file/d/1Bz-TfCDtcwQEFgkf8ygfgMLY-r2K_RVy/view?usp=sharing"
+                  externalLabel="View project"
+                >
+                  In this role, I served as the cameraman or Director of Photography (DP), responsible for setting camera
+                  angles in the breakdown. Additionally, I defined the target audience and crafted the key message for the
+                  project.
+                </ReadMoreDialog>
+              </div>
+            </article>
+            <article className="card card-hover p-5">
+              <video className="rounded-md border w-full" controls preload="metadata" >
+                <source src="/photo/Propoliz/Propoliz.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <h3 className="font-semibold">Propoliz Advertise</h3>
+              <p className="mt-2 text-sm opacity-90">Analyzed scenes to determine lighting; collaborated with the director and DP.</p>
+              <div className="mt-3">
+                <ReadMoreDialog
+                  title="Propoliz Advertise"
+                  externalHref="https://drive.google.com/file/d/1rj2qdZId-DXv_rwtdjLd93Pltkl-9VzB/view?usp=sharing"
+                  externalLabel="Watch here"
+                >
+                  I analyzed each scene from the breakdown to determine appropriate lighting placement. I collaborated closely
+                  with the director and the Director of Photography (DP) to ensure that the lighting supported the visual tone
+                  and narrative of the film.
+                </ReadMoreDialog>
+              </div>
+            </article>
+          </div>
+        </section>
         {/* Awards */}
         <section id="awards" className="container py-12">
           <h2 className="section-title mb-6">Awards</h2>
-          <ul className="space-y-4">
+        
+          <ul className="space-y-4 mt-6">
             <li className="card card-hover p-5">
+            <AwardsCarousel />
               <div className="font-semibold">Young Influencer Challenge Thailand</div>
               <div className="text-sm mt-1 opacity-90">Sep–Oct 2023 — Best Seller Award 1st Runner-up, Best Idea Award</div>
               <p className="text-sm mt-2 opacity-90">Led KOL selection aligned to target segments and designed promotional graphics.</p>
-              <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1NvARH5MNzarIRB9WeRiXLSON5CdCTe12/view?usp=sharing">View certificate →</a>
+              <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1NvARH5MNzarIRB9WeRiXLSON5CdCTe12/view?usp=sharing">View more →</a>
             </li>
+            
           </ul>
         </section>
 
