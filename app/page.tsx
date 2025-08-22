@@ -18,7 +18,7 @@ export default function Home() {
             <li><a className="nav-link" href="#projects">Projects</a></li>
             <li><a className="nav-link" href="#internships">Internships</a></li>
             <li><a className="nav-link" href="#class-projects">Class Projects</a></li>
-            <li><a className="nav-link" href="#production">Production</a></li>
+            <li><a className="nav-link" href="#class-projects-production">Production</a></li>
             <li><a className="nav-link" href="#awards">Awards</a></li>
             <li><a className="nav-link" href="#contact">Contact</a></li>
           </ul>
@@ -92,6 +92,7 @@ export default function Home() {
         <section id="class-projects" className="section-alt">
           <div className="container py-12">
             <h2 className="section-title mb-6">Projects in Class</h2>
+            <h3 className="font-semibold text-[18px] mb-3">Marketing</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <article className="card card-hover p-5">
                 <Image src={photoSpotify} alt="Spotify: Last Song Before You Die" className="rounded-md border" />
@@ -140,46 +141,44 @@ export default function Home() {
                 </div>
               </article>
             </div>
-          </div>
-        </section>
-        <section id="production" className="container py-12">
-          <h2 className="section-title mb-6">Production</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <article className="card card-hover p-5">
-              <Image src={photoMizumi} alt="MizuMi UV Acne Matte Serum (DP)" className="rounded-md border" />
-              <h3 className="font-semibold">MizuMi UV Acne Matte Serum (DP)</h3>
-              <p className="mt-2 text-sm opacity-90">Cameraman/DP setting camera angles; defined target audience and crafted the key message.</p>
-              <div className="mt-3">
-                <ReadMoreDialog
-                  title="MizuMi UV Acne Matte Serum (DP)"
-                  externalHref="https://drive.google.com/file/d/1Bz-TfCDtcwQEFgkf8ygfgMLY-r2K_RVy/view?usp=sharing"
-                  externalLabel="View project"
-                >
-                  In this role, I served as the cameraman or Director of Photography (DP), responsible for setting camera
-                  angles in the breakdown. Additionally, I defined the target audience and crafted the key message for the
-                  project.
-                </ReadMoreDialog>
-              </div>
-            </article>
-            <article className="card card-hover p-5">
-              <video className="rounded-md border w-full" controls preload="metadata" >
-                <source src="/photo/Propoliz/Propoliz.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <h3 className="font-semibold">Propoliz Advertise</h3>
-              <p className="mt-2 text-sm opacity-90">Analyzed scenes to determine lighting; collaborated with the director and DP.</p>
-              <div className="mt-3">
-                <ReadMoreDialog
-                  title="Propoliz Advertise"
-                  externalHref="https://drive.google.com/file/d/1rj2qdZId-DXv_rwtdjLd93Pltkl-9VzB/view?usp=sharing"
-                  externalLabel="Watch here"
-                >
-                  I analyzed each scene from the breakdown to determine appropriate lighting placement. I collaborated closely
-                  with the director and the Director of Photography (DP) to ensure that the lighting supported the visual tone
-                  and narrative of the film.
-                </ReadMoreDialog>
-              </div>
-            </article>
+            <h3 className="font-semibold text-[18px] mt-10 mb-3" id="class-projects-production">Production</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <article className="card card-hover p-5">
+                <Image src={photoMizumi} alt="MizuMi UV Acne Matte Serum (DP)" className="rounded-md border" />
+                <h3 className="font-semibold">MizuMi UV Acne Matte Serum (DP)</h3>
+                <p className="mt-2 text-sm opacity-90">Cameraman/DP setting camera angles; defined target audience and crafted the key message.</p>
+                <div className="mt-3">
+                  <ReadMoreDialog
+                    title="MizuMi UV Acne Matte Serum (DP)"
+                    externalHref="https://drive.google.com/file/d/1Bz-TfCDtcwQEFgkf8ygfgMLY-r2K_RVy/view?usp=sharing"
+                    externalLabel="View project"
+                  >
+                    In this role, I served as the cameraman or Director of Photography (DP), responsible for setting camera
+                    angles in the breakdown. Additionally, I defined the target audience and crafted the key message for the
+                    project.
+                  </ReadMoreDialog>
+                </div>
+              </article>
+              <article className="card card-hover p-5">
+                <video className="rounded-md border w-full" controls preload="metadata" >
+                  <source src="/photo/Propoliz/Propoliz.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <h3 className="font-semibold">Propoliz Advertise</h3>
+                <p className="mt-2 text-sm opacity-90">Analyzed scenes to determine lighting; collaborated with the director and DP.</p>
+                <div className="mt-3">
+                  <ReadMoreDialog
+                    title="Propoliz Advertise"
+                    externalHref="https://drive.google.com/file/d/1rj2qdZId-DXv_rwtdjLd93Pltkl-9VzB/view?usp=sharing"
+                    externalLabel="Watch here"
+                  >
+                    I analyzed each scene from the breakdown to determine appropriate lighting placement. I collaborated closely
+                    with the director and the Director of Photography (DP) to ensure that the lighting supported the visual tone
+                    and narrative of the film.
+                  </ReadMoreDialog>
+                </div>
+              </article>
+            </div>
           </div>
         </section>
         {/* Awards */}
