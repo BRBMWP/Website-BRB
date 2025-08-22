@@ -1,5 +1,9 @@
 // Clean server-rendered page; use client dialog component for read more
 import ReadMoreDialog from "./components/ReadMoreDialog";
+import Image from "next/image";
+import photoMizumi from "@photo/MizuMi UV Acne Matte Serum (DP)/IMG_7516.JPG";
+import photoSpotify from "@photo/Spotify/Spotify Pic.jpg";
+import photoBangkokWorld from "@photo/Proposal Marketing Bangkok World/Bangkok World Final Project .jpg";
 
 export default function Home() {
   return (
@@ -11,6 +15,7 @@ export default function Home() {
             <li><a className="nav-link" href="#projects">Projects</a></li>
             <li><a className="nav-link" href="#internships">Internships</a></li>
             <li><a className="nav-link" href="#class-projects">Class Projects</a></li>
+            <li><a className="nav-link" href="#production">Production</a></li>
             <li><a className="nav-link" href="#awards">Awards</a></li>
             <li><a className="nav-link" href="#contact">Contact</a></li>
           </ul>
@@ -25,6 +30,44 @@ export default function Home() {
           <div className="mt-8 flex gap-4">
             <a href="#projects" className="btn btn-primary">View Projects</a>
             <a href="#contact" className="btn btn-outline">Contact</a>
+          </div>
+        </section>
+
+        {/* Production */}
+        <section id="production" className="container py-12">
+          <h2 className="section-title mb-6">Production</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <article className="card card-hover p-5">
+              <Image src={photoMizumi} alt="MizuMi UV Acne Matte Serum (DP)" className="rounded-md border" />
+              <h3 className="font-semibold">MizuMi UV Acne Matte Serum (DP)</h3>
+              <p className="mt-2 text-sm opacity-90">Cameraman/DP setting camera angles; defined target audience and crafted the key message.</p>
+              <div className="mt-3">
+                <ReadMoreDialog
+                  title="MizuMi UV Acne Matte Serum (DP)"
+                  externalHref="https://drive.google.com/file/d/1Bz-TfCDtcwQEFgkf8ygfgMLY-r2K_RVy/view?usp=sharing"
+                  externalLabel="View project"
+                >
+                  In this role, I served as the cameraman or Director of Photography (DP), responsible for setting camera
+                  angles in the breakdown. Additionally, I defined the target audience and crafted the key message for the
+                  project.
+                </ReadMoreDialog>
+              </div>
+            </article>
+            <article className="card card-hover p-5">
+              <h3 className="font-semibold">Propoliz Advertise</h3>
+              <p className="mt-2 text-sm opacity-90">Analyzed scenes to determine lighting; collaborated with the director and DP.</p>
+              <div className="mt-3">
+                <ReadMoreDialog
+                  title="Propoliz Advertise"
+                  externalHref="https://drive.google.com/file/d/1rj2qdZId-DXv_rwtdjLd93Pltkl-9VzB/view?usp=sharing"
+                  externalLabel="Watch here"
+                >
+                  I analyzed each scene from the breakdown to determine appropriate lighting placement. I collaborated closely
+                  with the director and the Director of Photography (DP) to ensure that the lighting supported the visual tone
+                  and narrative of the film.
+                </ReadMoreDialog>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -77,6 +120,7 @@ export default function Home() {
             <h2 className="section-title mb-6">Projects in Class</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <article className="card card-hover p-5">
+                <Image src={photoSpotify} alt="Spotify: Last Song Before You Die" className="rounded-md border" />
                 <h3 className="font-semibold">Spotify: Last Song Before You Die</h3>
                 <p className="mt-2 text-sm opacity-90">Campaign based on 4Rs with exclusive video content and podcast-focused insights.</p>
                 <div className="mt-3">
@@ -91,6 +135,7 @@ export default function Home() {
                 </div>
               </article>
               <article className="card card-hover p-5">
+                <Image src={photoBangkokWorld} alt="Proposal Marketing: Bangkok World" className="rounded-md border" />
                 <h3 className="font-semibold">Brand Mgmt: The Pizza Company</h3>
                 <p className="mt-2 text-sm opacity-90">Cloud Kitchen strategy analysis with market data and branding frameworks.</p>
                 <div className="mt-3">
@@ -146,12 +191,12 @@ export default function Home() {
                   <li>
                     <div className="font-semibold">Bachelor of Business Management</div>
                     <div className="text-sm opacity-90">Silpakorn University — 2021–2025</div>
-                  </li>
+          </li>
                   <li>
                     <div className="font-semibold">High School Math Program</div>
                     <div className="text-sm opacity-90">Assumption College — 2015–2021</div>
-                  </li>
-                </ol>
+          </li>
+        </ol>
               </div>
               <div>
                 <ul className="space-y-2">
@@ -160,7 +205,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-          </div>
+        </div>
         </section>
 
         {/* Contact */}
