@@ -6,6 +6,7 @@ import photoSpotify from "@photo/Spotify/Spotify Pic.jpg";
 import photoBangkokWorld from "@photo/Proposal Marketing Bangkok World/Bangkok World Final Project .jpg";
 import photoPizza from "@photo/Pizza/pizza.png";
 import AwardsCarousel from "./components/AwardsCarousel";
+import photoProfile from "@photo/Profile/1673419968680.jpg";
 
 export default function Home() {
   return (
@@ -27,11 +28,20 @@ export default function Home() {
       <main>
         {/* Hero */}
         <section id="home" className="container py-16 sm:py-24">
-          <h1 className="text-5xl sm:text-[56px] font-extrabold tracking-tight navy">Tanaphop Sangwan</h1>
-          <p className="mt-5 text-[18px] leading-8 max-w-3xl opacity-90">Bachelor of Business Management, Silpakorn University (2021–2025). Marketing, branding, and production experience with a focus on research-driven campaigns.</p>
-          <div className="mt-8 flex gap-4">
-            <a href="#projects" className="btn btn-primary">View Projects</a>
-            <a href="#contact" className="btn btn-outline">Contact</a>
+          <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-10">
+            <div>
+              <h1 className="text-5xl sm:text-[56px] font-extrabold tracking-tight navy">Tanaphop Sangwan</h1>
+              <p className="mt-5 text-[18px] leading-8 max-w-3xl opacity-90">Bachelor of Business Management, Silpakorn University (2021–2025). Marketing, branding, and production experience with a focus on research-driven campaigns.</p>
+              <div className="mt-8 flex gap-4">
+                <a href="#projects" className="btn btn-primary">View Projects</a>
+                <a href="#contact" className="btn btn-outline">Contact</a>
+              </div>
+            </div>
+            <div className="justify-self-center sm:justify-self-end w-full max-w-[320px] sm:max-w-[380px]">
+              <div className="relative w-full pb-[100%] rounded-xl overflow-hidden border">
+                <Image src={photoProfile} alt="Profile photo of Tanaphop Sangwan" fill className="object-cover" priority />
+              </div>
+            </div>
           </div>
         </section>
 
