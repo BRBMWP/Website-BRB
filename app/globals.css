@@ -104,7 +104,27 @@ a {
 .link:hover { text-decoration: underline; }
 
 /* Section title */
-.section-title { font-size: 1.5rem; line-height: 2rem; font-weight: 700; color: var(--navy); }
+.section-title {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: var(--emerald);
+  letter-spacing: 0.2px;
+  position: relative;
+  padding-bottom: 0.25rem;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 2px 6px rgba(46, 125, 96, 0.25);
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 4px;
+  width: 64px;
+  background: var(--emerald);
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(46, 125, 96, 0.35);
+}
 
 /* Alternating section bands */
 .section-alt {

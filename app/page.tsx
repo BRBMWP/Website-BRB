@@ -7,6 +7,10 @@ import photoBangkokWorld from "@photo/Proposal Marketing Bangkok World/Bangkok W
 import photoPizza from "@photo/Pizza/pizza.png";
 import AwardsCarousel from "./components/AwardsCarousel";
 import photoProfile from "@photo/Profile/1673419968680.jpg";
+import iconIntern from "@icon/Internship Expericence/Icon Intern Exp.png";
+import marketIcon from "@icon/Internship Expericence/marketIcon.png";
+import trueMoney from "@photo/truemoney/truemoney.png";
+import { BarChart2, TrendingUp, Brush, Film } from "lucide-react";
 
 export default function Home() {
   return (
@@ -46,44 +50,48 @@ export default function Home() {
        
 
         {/* Projects */}
-        <section id="projects" className="section-alt">
-          <div className="container py-12">
-            <h2 className="section-title mb-6">Projects</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <article className="card card-hover p-5">
-                <h3 className="font-semibold text-[16px]">Thesis: Truemoney Wallet Loyalty</h3>
-                <p className="mt-2 text-sm opacity-90">Quantitative research on satisfaction with e-service quality and brand loyalty among Digital Natives and Immigrants.</p>
-                <div className="mt-3">
-                  <ReadMoreDialog
-                    title="Thesis: Truemoney Wallet Loyalty"
-                    externalHref="https://drive.google.com/file/d/1pz0WsND_fZe0B9M5hkmMuUno6nrYO6uh/view?usp=sharing"
-                    externalLabel="View full document"
-                  >
-                    Thesis Study of Purchasing and Service Usage Behavior, E-Service Quality Satisfaction, and Loyalty of
+      
+        <section id="awards" className="container py-12">
+          <h2 className="section-title mb-6">Projects</h2>
+          <div className="card p-4 sm:p-5 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+          <Image src={trueMoney} alt="Thesis icon" width={96} height={96} className="rounded" />
+              
+            <div className="hidden sm:block w-px self-stretch bg-[var(--card-border)]" aria-hidden="true" />
+            <div className="flex-1 w-full">
+              <div className="font-semibold">Thesis: Truemoney Wallet Loyalty</div>
+               <p className="text-sm mt-2 opacity-90">
+              Thesis Study of Purchasing and Service Usage Behavior, E-Service Quality Satisfaction, and Loyalty of
                     Digital Natives and Digital Immigrants Toward Truemoney Wallet (Quantitative Research). This study explores
                     purchasing and service usage behavior, satisfaction with electronic service quality, and brand loyalty among
                     user groups. The objective is to investigate how satisfaction with service quality influences brand loyalty
                     within each group.
-                  </ReadMoreDialog>
-                </div>
-              </article>
+              </p>
+              <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1pz0WsND_fZe0B9M5hkmMuUno6nrYO6uh/view?usp=sharing">View more →</a>
             </div>
           </div>
         </section>
-
         {/* Internships */}
-        <section id="internships" className="container py-12">
+        <section id="internships" className="container py-12 ">
           <h2 className="section-title mb-6">Internship Experience</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <article className="card card-hover p-5">
-              <h3 className="font-semibold">Real Estate Campaign Analysis</h3>
-              <p className="mt-2 text-sm opacity-90">Analyzed competitor campaigns, objectives, mechanics, rewards, and channels in the real estate sector.</p>
-              <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1P3pyYmXzi8JCr7AH1DrcRaCqTUt-yZW8/view?usp=sharing">View doc →</a>
+          
+          <div className="flex flex-col gap-4">
+            <article className="card p-4 sm:p-5 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+              <Image src={iconIntern} alt="Internship Experience icon" width={96} height={96} className="rounded" />
+              <div className="hidden sm:block w-px self-stretch bg-[var(--card-border)]" aria-hidden="true" />
+              <div className="flex-1 w-full">
+                <h3 className="font-semibold">Real Estate Campaign Analysis</h3>
+                <p className="text-sm mt-2 opacity-90">Analyze competitors’ campaigns in the real estate industry over the past year. Identify the objectives of each brand’s campaign, the mechanics involved, the rewards or prizes offered to the target audience, and the communication channels used</p>
+                <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1P3pyYmXzi8JCr7AH1DrcRaCqTUt-yZW8/view?usp=sharing">View doc →</a>
+              </div>
             </article>
-            <article className="card card-hover p-5">
-              <h3 className="font-semibold">Affiliate Marketing Analysis</h3>
-              <p className="mt-2 text-sm opacity-90">Evaluated marketplace platforms, pros/cons, best-fit products, and audience purchasing behaviors.</p>
-              <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1yhH94Ws6K_6JPcweliUHsPNiPBvFMYf9/view?usp=sharing">View doc →</a>
+            <article className="card p-4 sm:p-5 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+              <Image src={marketIcon} alt="Affiliate marketing analysis icon" width={96} height={96} className="rounded" />
+              <div className="hidden sm:block w-px self-stretch bg-[var(--card-border)]" aria-hidden="true" />
+              <div className="flex-1 w-full">
+                <h3 className="font-semibold">Affiliate Marketing Analysis</h3>
+                <p className="text-sm mt-2 opacity-90"> Analyze Affiliate Marketing within different marketplace platforms by identifying their advantages and disadvantages. Evaluate which types of products are most suitable for each marketplace, and examine the characteristics and purchasing behaviors of target consumers specific to each platform.</p>
+                <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1yhH94Ws6K_6JPcweliUHsPNiPBvFMYf9/view?usp=sharing">View doc →</a>
+              </div>
             </article>
           </div>
         </section>
@@ -184,17 +192,24 @@ export default function Home() {
         {/* Awards */}
         <section id="awards" className="container py-12">
           <h2 className="section-title mb-6">Awards</h2>
-        
-          <ul className="space-y-4 mt-6">
-            <li className="card card-hover p-5">
-            <AwardsCarousel />
+          <div className="card p-4 sm:p-5 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+            <div className="flex-1 w-full">
+              <AwardsCarousel />
+            </div>
+            <div className="hidden sm:block w-px self-stretch bg-[var(--card-border)]" aria-hidden="true" />
+            <div className="flex-1 w-full">
               <div className="font-semibold">Young Influencer Challenge Thailand</div>
-              <div className="text-sm mt-1 opacity-90">Sep–Oct 2023 — Best Seller Award 1st Runner-up, Best Idea Award</div>
-              <p className="text-sm mt-2 opacity-90">Led KOL selection aligned to target segments and designed promotional graphics.</p>
+              <div className="text-sm mt-1 opacity-90">September – October 2023</div>
+              <div className="text-sm mt-1 opacity-90">Best Seller Award — 1st Runner-up · Best Idea Award</div>
+              <p className="text-sm mt-2 opacity-90">
+                My role in this project is to listen and understand the characteristics and behaviors of each target group,
+                in order to select the appropriate KOLs to promote products correctly according to the target audience.
+                Additionally, I am responsible for designing various graphics for the project, such as product sale posters
+                and graphics for special occasions.
+              </p>
               <a className="mt-3 inline-block link" target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1NvARH5MNzarIRB9WeRiXLSON5CdCTe12/view?usp=sharing">View more →</a>
-            </li>
-            
-          </ul>
+            </div>
+          </div>
         </section>
 
         {/* Education & Skills */}
@@ -215,10 +230,28 @@ export default function Home() {
         </ol>
               </div>
               <div>
-                <ul className="space-y-2">
-                  <li className="card p-3 text-sm">SPSS, Google Trends</li>
-                  <li className="card p-3 text-sm">Adobe Photoshop, Premiere Pro, CapCut</li>
-                </ul>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="card p-3 text-sm flex items-center gap-2">
+                    <BarChart2 className="h-4 w-4" />
+                    <span>SPSS</span>
+                  </div>
+                  <div className="card p-3 text-sm flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4" />
+                    <span>Google Trends</span>
+                  </div>
+                  <div className="card p-3 text-sm flex items-center gap-2">
+                    <Brush className="h-4 w-4" />
+                    <span>Adobe Photoshop</span>
+                  </div>
+                  <div className="card p-3 text-sm flex items-center gap-2">
+                    <Film className="h-4 w-4" />
+                    <span>Premiere Pro</span>
+                  </div>
+                  <div className="card p-3 text-sm flex items-center gap-2">
+                    <Film className="h-4 w-4" />
+                    <span>CapCut</span>
+                  </div>
+                </div>
               </div>
             </div>
         </div>
@@ -226,7 +259,7 @@ export default function Home() {
 
         {/* Contact */}
         <section id="contact" className="container py-12">
-          <h2 className="section-title mb-6">Contact</h2>
+          <h2 className="section-title mb-6 ">Contact</h2>
           <ul className="space-y-2 text-sm">
             <li>Tel: <a className="link" href="tel:0954712815">095-471-2815</a></li>
             <li>Email: <a className="link" href="mailto:TanaphopSangwan135@gmail.com">TanaphopSangwan135@gmail.com</a></li>
